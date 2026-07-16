@@ -16,13 +16,7 @@ const items = [
   { label: "Email", href: `mailto:${c.email}`, Icon: MailIcon, external: false },
   { label: "WhatsApp", href: waHref, Icon: WhatsAppIcon, external: true },
   {
-    label: "Instagram, személyes fiók",
-    href: c.instagramPersonal,
-    Icon: InstagramIcon,
-    external: true,
-  },
-  {
-    label: "Instagram, szakmai fiók",
+    label: "Instagram",
     href: c.instagramPro,
     Icon: InstagramIcon,
     external: true,

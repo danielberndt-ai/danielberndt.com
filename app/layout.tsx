@@ -109,7 +109,6 @@ function JsonLd() {
       "AI marketing",
     ],
     sameAs: [
-      siteConfig.contacts.instagramPersonal,
       siteConfig.contacts.instagramPro,
       siteConfig.contacts.linkedin,
     ],

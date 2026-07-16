@@ -297,29 +297,11 @@ a:focus-visible {
     background 0.22s ease, box-shadow 0.22s ease;
 }
 
-/* Bal oldali narancs akcentus-csík, ami hoverre feltűnik */
-.link-btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--accent);
-  transform: scaleY(0);
-  transform-origin: center;
-  transition: transform 0.22s ease;
-}
-
 .link-btn:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 140, 0, 0.45);
   background: rgba(255, 140, 0, 0.06);
   box-shadow: 0 14px 30px -18px rgba(255, 140, 0, 0.7);
-}
-
-.link-btn:hover::before {
-  transform: scaleY(1);
 }
 
 .link-btn__text {
@@ -360,6 +342,24 @@ a:focus-visible {
   font-size: 0.78rem;
   color: var(--text-dim);
   text-align: center;
+}
+
+/* ==========================================================================
+   Mobil: egyszínű háttér
+   ========================================================================== */
+@media (max-width: 640px) {
+  body {
+    background: var(--base);
+  }
+
+  .bg {
+    background: var(--base);
+  }
+
+  .bg-grid,
+  .bg-glow {
+    display: none;
+  }
 }
 
 /* ==========================================================================
