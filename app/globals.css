@@ -57,6 +57,19 @@ a {
   text-decoration: none;
 }
 
+/* Vizuálisan rejtett, de képernyőolvasónak és gépi elemzőknek látható. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Egységes, jól látható billentyűzetes fókusz */
 a:focus-visible {
   outline: 2px solid var(--accent);
@@ -246,6 +259,7 @@ a:focus-visible {
   gap: 0.6rem;
   margin: 1.6rem 0 1.9rem;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .contact-btn {
@@ -280,6 +294,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  list-style: none;
 }
 
 .link-btn {

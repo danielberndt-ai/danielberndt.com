@@ -26,21 +26,27 @@ const items = [
 
 export default function ContactRow() {
   return (
-    <nav className="contacts" aria-label="Kapcsolat">
-      {items.map(({ label, href, Icon, external }) => (
-        <a
-          key={label}
-          href={href}
-          className="contact-btn"
-          aria-label={label}
-          title={label}
-          {...(external
-            ? { target: "_blank", rel: "noopener noreferrer" }
-            : {})}
-        >
-          <Icon className="contact-icon" width={22} height={22} />
-        </a>
-      ))}
+    <nav aria-labelledby="kapcsolat-cim">
+      <h2 id="kapcsolat-cim" className="sr-only">
+        Kapcsolat
+      </h2>
+      <ul className="contacts">
+        {items.map(({ label, href, Icon, external }) => (
+          <li key={label}>
+            <a
+              href={href}
+              className="contact-btn"
+              aria-label={label}
+              title={label}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+            >
+              <Icon className="contact-icon" width={22} height={22} />
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }

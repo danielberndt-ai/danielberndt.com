@@ -12,6 +12,12 @@ export const siteConfig = {
   // Domain (canonical, sitemap, JSON-LD). Végén NE legyen perjel.
   url: "https://danielberndt.com",
 
+  // A tartalom utolsó érdemi módosítása (dateModified, sitemap lastmod).
+  // Szándékosan kézzel írt dátum, nem build-idő: csak akkor írd át, ha a
+  // szövegek vagy a linkek tényleg változtak. Így a frissesség jelzés igaz
+  // marad egy puszta újradeploy után is. Formátum: YYYY-MM-DD.
+  contentModified: "2026-07-16",
+
   // Profilkép a public mappából
   avatar: "/profile.jpg",
 

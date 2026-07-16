@@ -125,12 +125,26 @@ function JsonLd() {
     publisher: { "@id": `${siteConfig.url}/#person` },
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/#webpage`,
+    url: siteConfig.url,
+    name: `${siteConfig.name} | ${siteConfig.tagline}`,
+    description: siteConfig.bio,
+    inLanguage: "hu-HU",
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+    about: { "@id": `${siteConfig.url}/#person` },
+    primaryImageOfPage: `${siteConfig.url}${siteConfig.ogImage}`,
+    dateModified: siteConfig.contentModified,
+  };
+
   return (
     <script
       type="application/ld+json"
       // A JSON-LD statikus és megbízható forrásból származik, ezért biztonságos.
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify([personSchema, websiteSchema]),
+        __html: JSON.stringify([personSchema, websiteSchema, webPageSchema]),
       }}
     />
   );
