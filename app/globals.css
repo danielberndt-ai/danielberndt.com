@@ -3,6 +3,8 @@
    ========================================================================== */
 :root {
   --base: #042f2e;
+  /* A mobil egyszínű háttér: a --base 20%-kal sötétebb változata. */
+  --base-mobile: #032625;
   --base-deep: #021817;
   --base-abyss: #010e0d;
   --accent: #ff8c00;
@@ -364,11 +366,11 @@ a:focus-visible {
    ========================================================================== */
 @media (max-width: 640px) {
   body {
-    background: var(--base);
+    background: var(--base-mobile);
   }
 
   .bg {
-    background: var(--base);
+    background: var(--base-mobile);
   }
 
   .bg-grid,
