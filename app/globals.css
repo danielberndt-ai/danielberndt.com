@@ -384,6 +384,89 @@ a:focus-visible {
 }
 
 /* ==========================================================================
+   "Hamarosan" oldal
+   ========================================================================== */
+.soon {
+  text-align: center;
+}
+
+.soon__badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  background: rgba(255, 140, 0, 0.08);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.soon__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  letter-spacing: -0.02em;
+  margin: 1rem 0 0.8rem;
+}
+
+.soon__lead {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  max-width: 42ch;
+  margin: 0 auto;
+}
+
+.soon__actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+.soon__btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius);
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.soon__btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 140, 0, 0.45);
+  background: rgba(255, 140, 0, 0.06);
+}
+
+/* Sötét szöveg a narancson: fehérrel megbukna a WCAG AA kontraszt. */
+.soon__btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1b2320;
+}
+
+.soon__btn--primary:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-soft);
+}
+
+.soon__back {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.soon__back a:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
    Jogi szöveges oldal (adatvédelmi tájékoztató)
    ========================================================================== */
 .page--legal {

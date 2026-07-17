@@ -16,7 +16,8 @@ export function buildAgentManifest() {
       linkedin: siteConfig.contacts.linkedin,
       instagram: siteConfig.contacts.instagramPro,
     },
-    // Csak a valódi URL-ek; a még kitöltetlen placeholder nem kerül be.
+    // Csak a valódi, működő célpontok. A belső, "hamarosan" állapotú oldalak
+    // (relatív href) kimaradnak — lásd az app/llms.txt/route.ts indoklását.
     actions: siteConfig.links
       .filter((link) => link.href.startsWith("http"))
       .map((link) => ({

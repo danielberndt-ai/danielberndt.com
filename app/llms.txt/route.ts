@@ -2,8 +2,11 @@ import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-// A siteConfig.links tartalmazhat még ki nem töltött placeholdert, azt nem
-// hirdetjük meg. Csak a valódi, abszolút URL-ek kerülnek be.
+// Csak a valódi, működő célpontokat hirdetjük meg. A belső, még "hamarosan"
+// állapotú oldalak (relatív href) szándékosan kimaradnak: az AI SEO
+// Tanácsadás oldala noindex, amíg nincs mögötte foglalás — értelmetlen
+// lenne szolgáltatásként ajánlani. Ha élesedik, abszolút URL-t kap, és
+// automatikusan bekerül.
 const publishedLinks = siteConfig.links.filter((link) =>
   link.href.startsWith("http")
 );

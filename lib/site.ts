@@ -54,9 +54,11 @@ export const siteConfig = {
     {
       label: "AI SEO Tanácsadás",
       description: "Foglalj egy időpontot egy személyes konzultációra",
-      // FIGYELEM: ide illeszd be a végleges Google Calendar foglalási linked!
-      href: "REPLACE_WITH_GOOGLE_CALENDAR_URL",
-      external: true,
+      // Átmeneti "hamarosan" oldal. Ha megvan a Google Calendar foglalási
+      // link, cseréld ki ide, állítsd az external-t true-ra, és töröld az
+      // app/ai-seo-tanacsadas oldalt (vagy tedd rá az indexelést).
+      href: "/ai-seo-tanacsadas",
+      external: false,
     },
   ],
 } as const;
