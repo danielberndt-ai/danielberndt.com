@@ -11,8 +11,13 @@
   --accent-soft: #ffb04d;
 
   --text: #f4f6f5;
-  --text-muted: #9db4b0;
-  --text-dim: #6c8783;
+  /* A két halvány árnyalat mért WCAG-kontrasztra van hangolva a kártya
+     hátterén (kb. rgb(5,43,42)): muted 8.2:1 (AAA), dim 5.2:1 (AA).
+     A korábbi #6c8783 csak 3.55:1-et adott, azaz megbukott az AA-n.
+     Ha tovább világosítod a dim-et, összeolvad a muted-tel és eltűnik a
+     szinthierarchia. */
+  --text-muted: #abc4c0;
+  --text-dim: #82a29d;
 
   --card-bg: rgba(6, 40, 39, 0.55);
   --card-border: rgba(255, 255, 255, 0.08);
