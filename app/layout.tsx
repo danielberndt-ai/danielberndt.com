@@ -52,20 +52,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.bio,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
-      },
-    ],
+    // A kép nincs itt felsorolva: az app/opengraph-image.tsx fájlkonvenció
+    // generálja és fűzi be, így nem tud elavulni.
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.bio,
-    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
@@ -135,7 +128,7 @@ function JsonLd() {
     inLanguage: "hu-HU",
     isPartOf: { "@id": `${siteConfig.url}/#website` },
     about: { "@id": `${siteConfig.url}/#person` },
-    primaryImageOfPage: `${siteConfig.url}${siteConfig.ogImage}`,
+    primaryImageOfPage: `${siteConfig.url}/opengraph-image`,
     dateModified: siteConfig.contentModified,
   };
 

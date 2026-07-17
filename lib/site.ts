@@ -21,9 +21,6 @@ export const siteConfig = {
   // Profilkép a public mappából
   avatar: "/profile.jpg",
 
-  // OG / közösségi megosztási kép
-  ogImage: "/og.jpg",
-
   // ---------------------------------------------------------------------------
   // Kapcsolati ikonok (a profil alatt, sorban)
   // ---------------------------------------------------------------------------
