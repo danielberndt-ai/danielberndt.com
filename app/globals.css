@@ -359,6 +359,280 @@ a:focus-visible {
   font-size: 0.78rem;
   color: var(--text-dim);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer__legal a:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   Jogi szöveges oldal (adatvédelmi tájékoztató)
+   ========================================================================== */
+.page--legal {
+  /* A főoldali 480px egy jogi dokumentumhoz olvashatatlanul keskeny. */
+  max-width: 760px;
+}
+
+.legal {
+  text-align: left;
+  animation: none;
+}
+
+.legal__eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.legal__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  letter-spacing: -0.02em;
+  margin: 0.4rem 0 1.6rem;
+}
+
+.legal h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 2rem 0 0.6rem;
+  color: var(--text);
+}
+
+.legal h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 1.4rem 0 0.5rem;
+  color: var(--accent-soft);
+}
+
+.legal p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.legal ul {
+  margin: 0 0 0.9rem 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.legal li {
+  margin-bottom: 0.3rem;
+}
+
+.legal strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.legal a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Széles tartalom sose tolja szét az oldalt vízszintesen. */
+.legal__tablewrap {
+  overflow-x: auto;
+  margin-bottom: 0.9rem;
+}
+
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  min-width: 480px;
+}
+
+.legal th,
+.legal td {
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-muted);
+  vertical-align: top;
+}
+
+.legal th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+.legal__back {
+  margin-top: 2.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--card-border);
+}
+
+/* ==========================================================================
+   Süti-hozzájárulás
+   ========================================================================== */
+.footer-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
+.consent {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  /* A mobil böngésző lebegő eszköztára fölé emeljük. */
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-body);
+}
+
+.consent__panel {
+  /* "Liquid glass": áttetsző alap + erős elmosás, hogy az alatta lévő
+     tartalom átderengjen, de a szöveg olvasható maradjon. */
+  background: rgba(244, 241, 234, 0.55);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  max-width: 720px;
+  width: 100%;
+  padding: 20px 22px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.consent__lead {
+  font-size: 0.845rem;
+  line-height: 1.6;
+  color: #1b2320;
+}
+
+.consent__cats {
+  margin-top: 14px;
+}
+
+.consent-cat {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-top: 1px solid rgba(4, 47, 46, 0.1);
+}
+
+.consent-cat__box {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.consent-cat__box:disabled {
+  cursor: not-allowed;
+}
+
+.consent-cat__title {
+  font-size: 0.845rem;
+  font-weight: 600;
+  color: #111917;
+}
+
+.consent-cat__locked {
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: #3a4644;
+  margin-left: 8px;
+}
+
+.consent-cat__desc {
+  font-size: 0.78rem;
+  color: #2a3331;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.consent__actions {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+/* Azonos szélesség és súly: a hozzájárulás megtagadása nem lehet nehezebb,
+   mint a megadása (nincs sötét minta). */
+.consent-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  border: none;
+  border-radius: 11px;
+  padding: 11px 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.845rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Sötét szöveg a narancson: fehérrel megbukna a WCAG AA kontraszt. */
+.consent-btn--accept {
+  background: var(--accent);
+  color: #1b2320;
+}
+
+.consent-btn--reject {
+  background: #1b2320;
+  color: #ffffff;
+}
+
+.consent-btn--ghost {
+  background: transparent;
+  color: #1b2320;
+  border: 1px solid rgba(4, 47, 46, 0.35);
+}
+
+.consent-btn:focus-visible {
+  outline: 2px solid #1b2320;
+  outline-offset: 2px;
+}
+
+.consent__links {
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: #2a3331;
+}
+
+.consent__links a {
+  color: var(--base);
+  font-weight: 600;
+}
+
+.consent__links a:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================

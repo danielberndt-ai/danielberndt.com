@@ -3,6 +3,7 @@ import Background from "@/components/Background";
 import Avatar from "@/components/Avatar";
 import ContactRow from "@/components/ContactRow";
 import LinkButtons from "@/components/LinkButtons";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -26,6 +27,9 @@ export default function Home() {
         <footer className="footer">
           <span>
             © {year} {siteConfig.name}
+          </span>
+          <span className="footer__legal">
+            <CookieConsent />
           </span>
         </footer>
       </main>
