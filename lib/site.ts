@@ -6,7 +6,7 @@
 export const siteConfig = {
   // Alap adatok
   name: "Daniel Berndt",
-  tagline: "AI SEO & AI láthatóság szakértő",
+  tagline: "AI SEO & AI láthatósági szakértő",
   bio: "11 év IT mérnöki, 8 év online marketinges és 6 év AI tapasztalattal abban segítek, hogy ott legyél az AI keresők válaszaiban.",
 
   // Domain (canonical, sitemap, JSON-LD). Végén NE legyen perjel.
@@ -16,7 +16,7 @@ export const siteConfig = {
   // Szándékosan kézzel írt dátum, nem build-idő: csak akkor írd át, ha a
   // szövegek vagy a linkek tényleg változtak. Így a frissesség jelzés igaz
   // marad egy puszta újradeploy után is. Formátum: YYYY-MM-DD.
-  contentModified: "2026-07-16",
+  contentModified: "2026-07-17",
 
   // Profilkép a public mappából
   avatar: "/profile.jpg",
