@@ -368,6 +368,16 @@ a:focus-visible {
   color: var(--accent);
 }
 
+/* A ©-sor névhivatkozása: aláhúzás nélkül, csak hoverre színeződik. */
+.footer__brand {
+  text-decoration: none;
+}
+
+.footer__brand:hover,
+.footer-link:hover {
+  color: var(--accent);
+}
+
 /* ==========================================================================
    Jogi szöveges oldal (adatvédelmi tájékoztató)
    ========================================================================== */
@@ -487,8 +497,6 @@ a:focus-visible {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .footer-link:hover {

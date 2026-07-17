@@ -289,7 +289,10 @@ export default function PrivacyPolicy() {
 
         <footer className="footer">
           <span>
-            © {new Date().getFullYear()} {siteConfig.name}
+            © {new Date().getFullYear()}{" "}
+            <a href={siteConfig.url} className="footer__brand">
+              {siteConfig.name}
+            </a>
           </span>
           {/* A süti-sávnak ezen az oldalon is meg kell jelennie: aki
               közvetlenül ide érkezik, ugyanúgy dönthessen. */}

@@ -26,7 +26,10 @@ export default function Home() {
 
         <footer className="footer">
           <span>
-            © {year} {siteConfig.name}
+            © {year}{" "}
+            <a href={siteConfig.url} className="footer__brand">
+              {siteConfig.name}
+            </a>
           </span>
           <span className="footer__legal">
             <CookieConsent />
