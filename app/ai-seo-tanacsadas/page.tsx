@@ -29,7 +29,7 @@ export default function Consulting() {
           <h1 className="soon__title">AI SEO Tanácsadás</h1>
           <p className="soon__lead">
             Az online időpontfoglalás még készül. Ha személyes konzultációra
-            gondolsz, írj nyugodtan — ugyanúgy egyeztetünk egy időpontot, csak
+            gondolsz, írj nyugodtan, ugyanúgy egyeztetünk egy időpontot, csak
             eggyel kevesebb kattintással.
           </p>
 
