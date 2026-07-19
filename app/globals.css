@@ -575,6 +575,11 @@ a:focus-visible {
   border-top: 1px solid var(--card-border);
 }
 
+/* Navigációs link, nem hivatkozás a szövegtörzsben: nem húzzuk alá. */
+.legal__back a {
+  text-decoration: none;
+}
+
 /* ==========================================================================
    Süti-hozzájárulás
    ========================================================================== */
